@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Blog Juliana</title>
+    <link rel="stylesheet" href="admin-style.css"> 
+    <style>
+        /* Estilos específicos para a Dashboard (Adicione ao final do admin-style.css, ou para testes, aqui) */
+        .dashboard-container {
+            max-width: 900px;
+            padding: 30px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dashboard-header {
+            border-bottom: 2px solid #E0B0C0;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .dashboard-header h1 {
+            color: #CC2255;
+            font-size: 2em;
+        }
+
+        .dashboard-menu {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .dashboard-menu a, .dashboard-menu button {
+            background-color: #A01C42; /* Rosa mais escuro para botões de ação */
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dashboard-menu a:hover, .dashboard-menu button:hover {
+            background-color: #CC2255;
+        }
+
+        /* Estilo para a Lista de Posts (Table) */
+        .post-list-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .post-list-table th, .post-list-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .post-list-table th {
+            background-color: #FAE8F0; /* Fundo Rosa Suave */
+            color: #A01C42;
+            font-weight: bold;
+        }
+
+        .post-list-table .action-btn {
+            background: none;
+            border: none;
+            color: #CC2255;
+            cursor: pointer;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .post-list-table .action-btn:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <header class="dashboard-header">
+            <h1>🌸 Dashboard do Blog</h1>
+            <p>Bem-vinda, Juliana! Gerencie seus posts e perfil.</p>
+        </header>
+
+        <nav class="dashboard-menu">
+            <a href="editor.html">✍️ Novo Post</a>
+            <a href="perfil-edit.html">👩‍💻 Editar Perfil</a>
+            <a href="../home/index.html">🏠 Ver Blog</a>
+            <button onclick="alert('Funcionalidade de Logout (backend)')">🚪 Sair</button>
+        </nav>
+
+        <h2>📊 Seus Posts Atuais</h2>
+        
+        <table class="post-list-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>O Palco e a Vida: Reflexões Pós-Ensaio</td>
+                    <td>28/10/2025</td>
+                    <td>
+                        <button class="action-btn" onclick="location.href='editor.html?id=1'">Editar</button>
+                        <button class="action-btn" style="color: red;">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diário de Código: Meu Primeiro Frontend!</td>
+                    <td>01/09/2025</td>
+                    <td>
+                        <button class="action-btn" onclick="location.href='editor.html?id=2'">Editar</button>
+                        <button class="action-btn" style="color: red;">Excluir</button>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+
+    </div>
+
+    </body>
+</html>

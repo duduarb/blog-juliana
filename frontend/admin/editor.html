@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Post - Blog Juliana</title>
+    <link rel="stylesheet" href="admin-style.css"> 
+    <style>
+        /* Estilos específicos para o Editor */
+        .editor-container {
+            max-width: 900px;
+            padding: 30px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .editor-container h1 {
+            color: #A01C42;
+            border-bottom: 2px solid #FAE8F0;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .form-group.full-width {
+            width: 100%;
+        }
+        
+        .form-group textarea {
+            min-height: 250px; /* Campo de conteúdo maior */
+            resize: vertical;
+        }
+
+        /* Botões de Ação no Editor */
+        .editor-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            justify-content: flex-end;
+        }
+
+        .btn-salvar {
+            background-color: #CC2255;
+        }
+        
+        .btn-salvar:hover {
+            background-color: #A01C42;
+        }
+
+        .btn-cancelar {
+            background-color: #999;
+        }
+
+        .btn-cancelar:hover {
+            background-color: #777;
+        }
+        
+        /* Aplica o estilo de botão do login para os botões de ação */
+        .editor-actions button {
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="editor-container">
+        <h1>✍️ Novo Post / Editar Post</h1>
+        
+        <form action="/admin/salvar-post" method="POST">
+            
+            <div class="form-group full-width">
+                <label for="titulo">Título do Post:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="resumo">Resumo (Para a Home):</label>
+                <textarea id="resumo" name="resumo" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="conteudo">Conteúdo Principal:</label>
+                <textarea id="conteudo" name="conteudo" rows="15" required></textarea>
+                <small>Dica: Use emojis e parágrafos curtos para melhor leitura!</small>
+            </div>
+            
+            <hr style="border-top: 1px solid #E0B0C0; margin: 30px 0;">
+
+            <div class="form-group full-width">
+                <label for="midia-url">Link da Mídia (URL da Imagem ou Vídeo):</label>
+                <input type="url" id="midia-url" name="midia-url" placeholder="Ex: https://img.blog.com/minhafoto.jpg">
+            </div>
+
+            <div class="form-group full-width">
+                <label for="midia-tipo">Tipo de Mídia:</label>
+                <select id="midia-tipo" name="midia-tipo">
+                    <option value="image">Imagem</option>
+                    <option value="video">Vídeo (Embed)</option>
+                    <option value="none">Apenas Texto</option>
+                </select>
+            </div>
+
+            <div class="editor-actions">
+                <button type="button" class="btn-cancelar" onclick="location.href='dashboard.html'">Cancelar</button>
+                <button type="submit" class="btn-salvar">💾 Salvar Post</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
