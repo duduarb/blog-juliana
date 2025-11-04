@@ -3,33 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonbre Mim</title>
+    <title>SOBRE MIM - Juliana</title>
+    <link rel="stylesheet" href="../home/style.css"> 
 </head>
 <body>
-    <div class="dados-container">
-        <h2 id="perfil-nome">Carregando Nome...</h2>
+    <header>
+        <h1>Blog da Juliana</h1>
+        <nav>
+            <a href="../home/index.html">HOME</a>
+            <a href="perfil.html">SOBRE MIM</a>
+        </nav>
+    </header>
 
-        <p><strong>Cidade/Estado:</strong> <span id="perfil-local">Carregando Local...</span>></span></p>
+    <main class="pagina-perfil">
+        
+        <div class="foto-container">
+            <img src="placeholder-foto.jpg" alt="Foto de perfil da Juliana" class="foto-perfil" id="perfil-foto">
+            <h2 id="perfil-nome"></h2> 
+        </div>
 
-        <hr>
+        <div class="dados-container">
+            <h3>🎓 Formação e Carreira</h3>
+            <p><strong>📚 Curso:</strong> <span id="perfil-curso"></span></p>
+            <p><strong>🎂 Idade:</strong> <span id="perfil-idade"></span></p>
+            
+            <hr>
+            
+            <h3>📍 Onde me Encontrar</h3>
+            <p><strong>🌎 Cidade/Estado:</strong> <span id="perfil-local"></span></p>
+            <p><strong>💼 Trabalho Atual:</strong> <span id="perfil-trabalho"></span></p>
 
-        <h3>🎓 Formação e Carreira</h3>
+            <hr>
 
-        <p><strong>📚 Curso:</strong> <span id="perfil-curso">Carregando Curso...</span></p>
-    <p><strong>🎂 Idade:</strong> <span id="perfil-idade">Carregando Idade...</span></p>
-    <p><strong>💼 Trabalho Atual:</strong> <span id="perfil-trabalho">Carregando Trabalho...</span></p>
+            <h3>✍️ Um Pouco Sobre Mim</h3>
+            <p id="perfil-bio"></p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Blog da Juliana</p>
+    </footer>
 
-    <hr>
-
-    <h3>✍️ Um Pouco Sobre Mim</h3>
-    <p id="perfil-bio">
-        Carregando biografia...
-    </p>
-    </div>
-
-    <div class="foto-container">
-        <img src="perfil-placeholder.jpg" alt="Foto de perfil da Juliana" class="foto-perfil" id="perfil-foto">
-    </div>
     <script src="perfil.js"></script>
 </body>
 </html>

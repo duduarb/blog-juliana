@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME - Blog da Juliana</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <h1>Blog da Juliana</h1>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="../sobre-mim/perfil.html">SOBRE MIM</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>✨ Posts Recentes e Inspirações ✨</h2>
+        
+        <section class="filtros-busca">
+            <input type="text" id="inputBusca" placeholder="Pesquisar por palavra-chave..." onkeyup="filtrarPosts()">
+            
+            <label for="dataInicio">De:</label>
+            <input type="date" id="dataInicio" onchange="filtrarPosts()">
+            
+            <label for="dataFim">Até:</label>
+            <input type="date" id="dataFim" onchange="filtrarPosts()">
+            
+            <button onclick="filtrarPosts()">🔎 Filtrar</button>
+            <button onclick="limparFiltros()" class="btn-limpar">🧹 Limpar Filtro</button>
+        </section>
+        
+        <section id="posts-container" class="lista-posts">
+            <p>Carregando posts...</p>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Blog da Juliana. Um projeto com toque teatral e muito rosa!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
